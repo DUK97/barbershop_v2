@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,iBACE,iBAAkB,CAClB,SAAU,CACV,UAAW,CACX,WAAY,CACZ,SAAU,CACV,eAAgB,CAChB,QAAS,CACT,kBAAmB","file":"../style.min.css","sourcesContent":[".visually-hidden {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  margin: -1px;\n  padding: 0;\n  overflow: hidden;\n  border: 0;\n  clip: rect(0 0 0 0);\n}\n"]}
