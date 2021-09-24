@@ -34,7 +34,7 @@ const html = () => {
 // CSS
 const styles = () => {
   return gulp
-    .src("src/sass/index.scss")
+    .src("src/sass/style.scss")
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss([postcssimport, autoprefixer, csso({ comments: false })]))

@@ -1,0 +1,17 @@
+@import "normalize.css";
+@import "../../src/sass/global/variables.scss";
+@import "../../src/sass/blocks/page.scss";
+@import "../../src/sass/blocks/page-header";
+@import "../../src/sass/blocks/main-nav.scss";
+@import "../../src/sass/blocks/site-list.scss";
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
