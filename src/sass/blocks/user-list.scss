@@ -2,3 +2,86 @@
 
 .user-list {
 }
+
+.user-list-nav__button {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--active {
+    border-bottom: 3px solid $roman-coffee;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  &:active {
+    color: fade-out($color: #000000, $amount: 0.7);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 33%;
+    left: 0;
+    background-image: url(/../images/sprite.png);
+    width: 17px;
+    height: 17px;
+    background-position: 0 205px;
+  }
+
+  &:hover::after {
+    @media screen and (min-width: $tablet-width) {
+      background-position: 0 205px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      background-position: 0 247px;
+    }
+  }
+}
+
+.user-list__button-text {
+  display: block;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .user-list-nav__button {
+    padding: 0;
+
+    &::after {
+      top: 25px;
+    }
+  }
+
+  .user-list__button-text {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .user-list-nav__button {
+    padding: 24px 32px;
+    padding-left: 60px;
+
+    &::after {
+      left: 26px;
+    }
+  }
+
+  .user-list__button-text {
+    display: block;
+  }
+}

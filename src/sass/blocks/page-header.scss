@@ -1,17 +1,43 @@
 //page-header
 .page-header {
-  background-color: #000000;
+  background-color: $grey-back;
   color: #ffffff;
   display: flex;
   flex-direction: column;
 }
+
 .page-header__logo {
+  display: flex;
+  justify-content: center;
+  padding: 29px 0;
 }
 
 @media (min-width: $tablet-width) {
+  .page-header__logo {
+    order: 1;
+    max-width: 370px;
+    margin: 0 auto;
+  }
+
   .page-header {
-    background-color: tomato;
+    background-image: url(/images/back-tablet.jpg);
+    padding-bottom: 152 px;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 469px;
   }
 }
 
-.home-courses-item-wrapper:nth-child(3)
+@media screen and (min-width: $desktop-width) {
+  .page-header {
+    background-image: url(/images/back-desktop.jpg);
+    background-size: cover;
+    height: 720px;
+  }
+
+  .page-header__logo {
+    padding: 0;
+    padding-top: 59px;
+  }
+}

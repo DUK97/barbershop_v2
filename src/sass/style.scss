@@ -1,17 +1,21 @@
+/* stylelint-disable function-calc-no-invalid */
 @import "normalize.css";
 @import "../../src/sass/global/variables.scss";
+@import "../../src/sass/global/global-style.scss";
+@import "slick-carousel/slick/slick.css";
 @import "../../src/sass/blocks/page.scss";
 @import "../../src/sass/blocks/page-header";
 @import "../../src/sass/blocks/main-nav.scss";
 @import "../../src/sass/blocks/site-list.scss";
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-}
+@import "../../src/sass/global/fonts.scss";
+@import "../../src/sass/blocks/user-list.scss";
+@import "../../src/sass/blocks/stats.scss";
+@import "../../src/sass/blocks/advantages.scss";
+@import "../../src/sass/blocks/page-main.scss";
+@import "../../src/sass/blocks/reviews.scss";
+@import "../../src/sass/blocks/page-footer.scss";
+@import "../../src/sass/blocks/contacts.scss";
+@import "../../src/sass/blocks/copyright.scss";
+@import "../../src/sass/blocks/socials.scss";
+@import "../../src/sass/blocks/news.scss";
+@import "../../src/sass/blocks/slick.scss";

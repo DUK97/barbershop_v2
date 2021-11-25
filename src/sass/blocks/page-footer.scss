@@ -1,7 +1,20 @@
 //page-footer
 .page-footer {
+  background-color: $grey-back;
+  padding-top: 50px;
 }
 .page-footer__wrapper {
+  color: #ffffff;
+
+  @media screen and (min-width: $tablet-width) {
+    display: grid;
+    grid-template-areas: "contacts . copyright" "socials socials socials";
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    grid-template-areas: "contacts socials copyright";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 .page-footer__contacts {
 }

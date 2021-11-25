@@ -6,7 +6,6 @@ import postcss from "gulp-postcss";
 import postcssimport from "postcss-import";
 import replace from "gulp-replace";
 import terser from "gulp-terser";
-import sourcemaps from "gulp-sourcemaps";
 import htmlmin from "gulp-htmlmin";
 import csso from "postcss-csso";
 import browsersync from "browser-sync";
@@ -14,8 +13,10 @@ import rename from "gulp-rename";
 import imagemin from "gulp-imagemin";
 import imageminwebp from "gulp-webp";
 import del from "del";
-
 import imageminmozjpeg from "imagemin-mozjpeg";
+import mapSources from "gulp-sourcemaps";
+import groupCssMedia from "gulp-group-css-media-queries";
+import include from "gulp-include";
 
 // HTML
 const html = () => {
@@ -35,11 +36,21 @@ const html = () => {
 const styles = () => {
   return gulp
     .src("src/sass/style.scss")
-    .pipe(sourcemaps.init())
-    .pipe(sass().on("error", sass.logError))
-    .pipe(postcss([postcssimport, autoprefixer, csso({ comments: false })]))
+    .pipe(mapSources.init())
+    .pipe(sass())
+    .pipe(groupCssMedia())
+    .pipe(
+      postcss([
+        postcssimport,
+        autoprefixer({
+          overrideBrowserslist: ["last 5 versions"],
+          cascade: false,
+        }),
+        csso({ comments: false }),
+      ])
+    )
     .pipe(rename("style.min.css"))
-    .pipe(sourcemaps.write("sourcemaps"))
+    .pipe(mapSources.write("."))
     .pipe(gulp.dest("dist/css"))
     .pipe(browsersync.stream());
 };
@@ -48,6 +59,7 @@ const styles = () => {
 const scripts = () => {
   return gulp
     .src("src/scripts/index.js")
+    .pipe(include())
     .pipe(
       babel({
         presets: ["@babel/preset-env"],
@@ -56,6 +68,13 @@ const scripts = () => {
     .pipe(terser())
     .pipe(gulp.dest("dist/scripts"))
     .pipe(browsersync.stream());
+};
+
+// fonts
+const fonts = () => {
+  return gulp
+    .src("src/sass/fonts/*.{svg,eot,woff,woff2,ttf}")
+    .pipe(gulp.dest("dist/fonts"));
 };
 
 // Images
@@ -139,6 +158,6 @@ const watch = () => {
 // Default
 export default gulp.series(
   clean,
-  gulp.parallel(html, styles, scripts, webp, images, copy),
+  gulp.parallel(html, styles, scripts, fonts, webp, images, copy),
   gulp.parallel(watch, server)
 );

@@ -1,60 +1,43 @@
-const a = 2;
+//=require \..\..\node_modules\jquery\dist\jquery.min.js
+//=require \..\..\node_modules\slick-carousel\slick\slick.min.js
 
-function createWrapper(isTrue, element, city) {
-  const div = document.createElement("div");
-  div.classList.add(`blog-list__city-wrapper--${city}`);
-  div.appendChild(element);
-  console.log(div);
-}
+$(function () {
+  $(".advantages__list").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: false,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: "unslick",
+      },
+    ],
+  });
 
-function appendCity(cityElement, isNewCity, city) {
-  const fragment = document.createDocumentFragment();
-  fragment.appendChild(cityElement);
+  $(".reviews__wrapper").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: false,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          mobileFirst: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+    ],
+  });
 
-  if (isNewCity) {
-    createWrapper(isNewCity, fragment, city);
-  } else {
-    document.querySelector(`blog-list__city-wrapper--${city}`);
-  }
-}
-
-function createCityElement(city, isLast, cityName) {
-  const fragment = document.createDocumentFragment();
-  const divWrapper = document.createElement("div");
-  const divCityWrapper = document.createElement("div");
-  const cityHeading = document.createElement("h5");
-
-  if (isLast) {
-    const cityName = city.dataset.city;
-    cityHeading.innerText = cityName;
-    divWrapper.appendChild(cityHeading);
-    fragment.appendChild(divWrapper);
-  }
-  divCityWrapper.appendChild(city);
-  fragment.appendChild(divCityWrapper);
-
-  appendCity(fragment, isLast, cityName);
-}
-
-function createCityGrid(DOMblock) {}
-
-for (let index = 0; index < sortedCityArr.length; index++) {
-  if (
-    sortedCityArr[index].dataset.city === sortedCityArr[index + 1].dataset.city
-  ) {
-    createCityElement(
-      sortedCityArr[index],
-      false,
-      sortedCityArr[index].dataset.city
-    );
-  }
-  if (
-    sortedCityArr[index].dataset.city !== sortedCityArr[index + 1].dataset.city
-  ) {
-    createCityElement(
-      sortedCityArr[index],
-      true,
-      sortedCityArr[index].dataset.city
-    );
-  }
-}
+  $(window).on("resize", function () {
+    $(".advantages__list").slick("resize");
+    $(".reviews__wrapper").slick("resize");
+  });
+});
