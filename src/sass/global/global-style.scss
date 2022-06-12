@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -30,8 +37,15 @@ body {
 .container {
   margin: 0 auto;
 
+  &--form {
+    margin: 0 20px;
+  }
+
   @media screen and (min-width: $tablet-width) {
     width: 640px;
+    &--form {
+      margin: 0 auto;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -55,10 +69,6 @@ body {
   align-items: center;
   justify-content: center;
 
-  @media screen and (min-width: $tablet-width) {
-    width: 160px;
-  }
-
   &--footer {
     color: #ffffff;
   }
@@ -66,21 +76,27 @@ body {
   &--phone {
     color: #ffffff;
     border-color: $charcoal;
+  }
+  &--form-submit {
+    width: 100%;
+    background-color: $roman-coffee;
+    color: #ffffff;
+  }
 
-    @media screen and (min-width: $tablet-width) {
+  &--copyright {
+    color: #ffffff;
+    border-color: $charcoal;
+  }
+  @media screen and (min-width: $tablet-width) {
+    width: 160px;
+    &--phone {
       border: none;
       font-weight: 400;
       margin: 0;
       padding: 0;
       justify-content: flex-start;
     }
-  }
-
-  &--copyright {
-    color: #ffffff;
-    border-color: $charcoal;
-
-    @media screen and (min-width: $tablet-width) {
+    &--copyright {
       margin-right: 0;
     }
   }
@@ -89,6 +105,11 @@ body {
 .triangle {
   &--advantages {
     fill: #f8f5f2;
+  }
+  &--form {
+    fill: #f8f5f2;
+    top: -34px;
+    height: unset;
   }
 
   &--reviews {
@@ -101,9 +122,17 @@ body {
 
   position: relative;
   bottom: -5px;
-
+  &--form {
+    display: none;
+  }
   @media screen and (min-width: $tablet-width) {
     bottom: -4px;
     height: 68px;
+    &--form {
+      fill: #f8f5f2;
+      top: -67px;
+      height: 68px;
+      display: block;
+    }
   }
 }

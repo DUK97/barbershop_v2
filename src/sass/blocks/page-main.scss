@@ -1,4 +1,18 @@
 //page-main
 .page-main {
   background-color: $seashell;
+
+  &__header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    &--form {
+    }
+    @media screen and (min-width: $tablet-width) {
+      &--form {
+        margin-bottom: 70px;
+      }
+    }
+  }
 }

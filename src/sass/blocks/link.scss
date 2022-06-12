@@ -1,0 +1,24 @@
+.link {
+  &--form {
+    display: none;
+  }
+  &:hover {
+    border-color: #d5c9bd;
+  }
+  &:active{
+    background-color: #D5C9BD;
+    opacity: 0.3;
+    
+  }
+  @media screen and (min-width: $tablet-width) {
+    display: inline;
+    padding: 13.5px 36.5px;
+    border: 1px solid #E5DDD5;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

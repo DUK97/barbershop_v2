@@ -1,6 +1,3 @@
-//=require \..\..\node_modules\jquery\dist\jquery.min.js
-//=require \..\..\node_modules\slick-carousel\slick\slick.min.js
-
 $(function () {
   $(".advantages__list").slick({
     slidesToShow: 1,
