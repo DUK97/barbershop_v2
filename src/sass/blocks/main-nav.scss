@@ -5,6 +5,11 @@
 
 .main-nav__wrapper {
   display: none;
+  &.shown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
 .main-nav__list {
 }
@@ -21,6 +26,12 @@
   text-transform: uppercase;
   text-align: right;
   padding-right: 46px;
+  font-weight: 700;
+  padding-block: 13px;
+  margin: 0;
+  &--hidden {
+    display: none;
+  }
 }
 
 .main-nav__toggle {
@@ -28,7 +39,8 @@
   background-color: $coffee;
   border: none;
   position: relative;
-
+  height: 50px;
+  padding: 0;
   &::after {
     content: "";
     position: absolute;
@@ -38,6 +50,26 @@
     height: 2.5px;
     background-color: #ffffff;
     box-shadow: 0 8px #ffffff, 0 16px #ffffff;
+  }
+  &--opened {
+    position: absolute;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 17px;
+      width: 36px;
+      height: 2.5px;
+      background-color: #ffffff;
+      box-shadow: none;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
 }
 

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
 h1,
@@ -7,6 +8,10 @@ h2,
 h3,
 h4 {
   margin: 0;
+}
+
+.hidden {
+  display: none;
 }
 
 .visually-hidden {
@@ -41,6 +46,14 @@ body {
     margin: 0 20px;
   }
 
+  &--works {
+    margin: 0 20px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin: 0 auto;
+    }
+  }
+
   @media screen and (min-width: $tablet-width) {
     width: 640px;
     &--form {
@@ -53,86 +66,21 @@ body {
   }
 }
 
-.button {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #000000;
-  text-decoration: none;
-  text-align: center;
-  border: 1px solid #e5ddd5;
-  padding: 13px 0;
-  margin-right: 20px;
-  margin-left: 20px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &--footer {
-    color: #ffffff;
-  }
-
-  &--phone {
-    color: #ffffff;
-    border-color: $charcoal;
-  }
-  &--form-submit {
-    width: 100%;
-    background-color: $roman-coffee;
-    color: #ffffff;
-  }
-
-  &--copyright {
-    color: #ffffff;
-    border-color: $charcoal;
-  }
-  @media screen and (min-width: $tablet-width) {
-    width: 160px;
-    &--phone {
-      border: none;
-      font-weight: 400;
-      margin: 0;
-      padding: 0;
-      justify-content: flex-start;
-    }
-    &--copyright {
-      margin-right: 0;
-    }
-  }
+// combined styles
+.form__label:hover .icon--box,
+.form__label:hover .icon--form::before,
+input:focus + .icon--box,
+input:focus + .icon--form::before,
+.form__input:hover,
+.form__input:focus {
+  box-shadow: inset 0px 0px 0px 4px #007dfa99;
 }
 
-.triangle {
-  &--advantages {
-    fill: #f8f5f2;
-  }
-  &--form {
-    fill: #f8f5f2;
-    top: -34px;
-    height: unset;
-  }
+.form__input:focus-visible {
+  outline: none;
+}
 
-  &--reviews {
-    fill: $grey-back;
-
-    @media screen and (min-width: $tablet-width) {
-      display: none;
-    }
-  }
-
-  position: relative;
-  bottom: -5px;
-  &--form {
-    display: none;
-  }
-  @media screen and (min-width: $tablet-width) {
-    bottom: -4px;
-    height: 68px;
-    &--form {
-      fill: #f8f5f2;
-      top: -67px;
-      height: 68px;
-      display: block;
-    }
-  }
+input:active + .icon--box,
+input:active + .icon--form::before {
+  background-color: #d5c9bd;
 }

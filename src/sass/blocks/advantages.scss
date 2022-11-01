@@ -45,6 +45,10 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     flex-direction: row;
     text-align: left;
+    &:hover,
+    &:focus {
+      outline: none;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -81,6 +85,7 @@
   line-height: 1;
   margin-bottom: 12px;
   text-transform: uppercase;
+  word-break: break-word;
 }
 
 .advantages__description {
@@ -88,6 +93,7 @@
   margin-bottom: 30px;
   font-size: 20px;
   line-height: 27px;
+  word-break: break-word;
 
   @media screen and (min-width: $desktop-width) {
     margin: 0;

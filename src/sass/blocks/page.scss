@@ -3,8 +3,10 @@
   &__title {
     padding: 34px 0;
     text-align: center;
+    text-transform: uppercase;
     &--form {
     }
+
     @media screen and (min-width: $tablet-width) {
       padding: 0;
       margin-bottom: 34px;
@@ -14,6 +16,10 @@
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 0;
+      }
+      &--portfolio {
+        font-size: 40px;
+        line-height: calc(40 / 30);
       }
     }
   }

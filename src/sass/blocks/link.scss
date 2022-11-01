@@ -2,18 +2,20 @@
   &--form {
     display: none;
   }
+  &--homepage {
+    display: none;
+  }
   &:hover {
     border-color: #d5c9bd;
   }
-  &:active{
-    background-color: #D5C9BD;
+  &:active {
+    background-color: #d5c9bd;
     opacity: 0.3;
-    
   }
   @media screen and (min-width: $tablet-width) {
     display: inline;
     padding: 13.5px 36.5px;
-    border: 1px solid #E5DDD5;
+    border: 1px solid #e5ddd5;
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;

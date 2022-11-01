@@ -4,16 +4,18 @@
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  background-image: url(/images/back-tablet.jpg);
   background-position: center 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: $grey-back;
   height: auto;
   &--main {
   }
   &--not-main {
   }
   @media screen and (min-width: $tablet-width) {
+    background-color: unset;
+    background-image: url(/images/back-tablet.jpg);
     &--main {
       height: 469px;
     }

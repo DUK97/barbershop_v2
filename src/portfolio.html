@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Барбершоп "Бородинский"</title>
-    <link rel="stylesheet" href="/css/style.min.css" />
+    <!-- main styles -->
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script type="text/javascript" src="scripts/helpers/slick.min.js"></script>
   </head>
   <body class="page__body">
-    <header class="page-header">
-      <a class="page-header__logo" href="">
+    <header class="page-header page-header--not-main">
+      <a class="page-header__logo" href="/">
         <picture
           ><source
             media="(min-width:1200px )"
@@ -23,263 +25,453 @@
         </picture>
       </a>
       <nav class="main-nav">
-        <div class="main-nav__toggle-button-wrapper">
-          <p class="main-nav__text-mobile">Работы</p>
-          <button class="main-nav__toggle">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-        </div>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list-nav__link site-list-nav__link--active" href=""
-                >Главная</a
-              >
-            </li>
-            <li class="site-list-nav__item">
-              <a class="site-list-nav__link" href="portfolio.html"
-                >Наши работы</a
-              >
-            </li>
-            <li class="site-list-nav__item">
-              <a class="site-list-nav__link" href="form.html">Записаться</a>
-            </li>
-            <li class="site-list-nav__item">
-              <a class="site-list-nav__link" href="">Контакты</a>
-            </li>
-            <li class="site-list-nav__item">
-              <a class="site-list-nav__link" href="">DUK97</a>
-            </li>
-          </ul>
-          <ul class="site-list-nav__list user-list">
-            <li class="site-list-nav__item">
-              <a class="site-list-nav__link js-login" href="">Войти</a>
-            </li>
-          </ul>
+        <div class="container">
+          <div class="main-nav__toggle-button-wrapper">
+            <p class="main-nav__text-mobile">Записаться</p>
+            <button class="main-nav__toggle">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </div>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list-nav__item">
+                <a class="site-list-nav__link" href="/">Главная</a>
+              </li>
+              <li class="site-list-nav__item">
+                <a
+                  class="site-list-nav__link site-list-nav__link--active"
+                  href="portfolio.html"
+                  >Наши работы</a
+                >
+              </li>
+              <li class="site-list-nav__item">
+                <a class="site-list-nav__link" href="form.html">Записаться</a>
+              </li>
+              <li class="site-list-nav__item">
+                <a class="site-list-nav__link" href="">Контакты</a>
+              </li>
+              <li class="site-list-nav__item">
+                <a class="site-list-nav__link" href="https://github.com/DUK97">DUK97</a>
+              </li>
+            </ul>
+            <ul class="site-list-nav__list user-list">
+              <li class="user-list-nav__item">
+                <button class="user-list-nav__button js-login">
+                  <span class="user-list__button-text">Войти</span>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
+
     <main class="page-main">
-      <header class="page-main__header">
-        <h1 class="page__title">Наши работы</h1>
-        <a class="link" href="/">На главную</a>
-      </header>
-      <section class="works">
-        <ul class="works__list">
-          <li class="works__wrapper">
-            <article class="works-item works-item--work-of-the-month">
-              <p class="works-item__image-wrapper">
-                <picture>
-                  <source
-                    media="(min-width:1200px)"
-                    srcset="
-                      /images/photo-1-desktop@1x.jpg 1x,
-                      /images/photo-1-desktop@2x.jpg 2x
-                    "
-                  />
-                  <source
-                    media="(min-width:768px )"
-                    srcset="
-                      images/photo-1-tablet@1x.jpg 1x,
-                      images/photo-1-tablet@2x.jpg 2x
-                    "
-                  />
-                  <img
-                    src="images/photo-1-mobile@1x.jpg"
-                    alt="Фото Лжепётра Мчиславского"
-                  />
-                </picture>
-              </p>
-              <blockquote class="works__blockquote">
-                <cite class="works__blockquote-author"
-                  >Лжепётр Мчиславский</cite
-                >
-                <p>
-                  Где я только не стригся, но так как делаете это вы — не умеет
-                  никто другой! Еще раз спасибо и до скорого!
-                </p>
-              </blockquote>
-              <ul class="work-type__list">
-                <li class="work-type__item work-type__item--haircut">
-                  Стрижка
-                </li>
-                <li class="work-type__item work-type__item--shaving">Бритье</li>
-                <li class="work-type__item work-type__item--mustache">Усы</li>
-              </ul>
-            </article>
-          </li>
-          <li class="works__wrapper">
-            <article class="works-item">
-              <p class="works-item__image-wrapper">
-                <picture>
-                  <source
-                    media="(min-width:1200px)"
-                    srcset="/images/photo-2-desktop@1x.jpg 1x"
-                  />
-                  <source
-                    media="(min-width:768px )"
-                    srcset="images/photo-2-tablet@1x.jpg 1x"
-                  />
-                  <img
-                    src="images/photo-2-mobile@1x.jpg"
-                    alt="Фото Саши Мальцева"
-                  />
-                </picture>
-              </p>
-              <blockquote class="works__blockquote">
-                <cite class="works__blockquote-author">Саша Мальцев</cite>
-                <p>
-                  Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
-                </p>
-              </blockquote>
-              <ul class="work-type__list">
-                <li class="work-type__item work-type__item--haircut">
-                  Стрижка
-                </li>
-              </ul>
-            </article>
-          </li>
-          <li class="works__wrapper">
-            <article class="works-item">
-              <p class="works-item__image-wrapper">
-                <picture>
-                  <source
-                    media="(min-width:1200px)"
-                    srcset="/images/photo-3-desktop@1x.jpg 1x"
-                  />
-                  <source
-                    media="(min-width:768px )"
-                    srcset="images/photo-3-tablet@1x.jpg 1x"
-                  />
-                  <img
-                    src="images/photo-3-mobile@1x.jpg"
-                    alt="Фото Фото Владимира Иваныча"
-                  />
-                </picture>
-              </p>
-              <blockquote class="works__blockquote">
-                <cite class="works__blockquote-author">Владимир Иваныч</cite>
-                <p>К зимнему сезону — готов!</p>
-              </blockquote>
-              <ul class="work-type__list">
-                <li class="work-type__item work-type__item--beard">Борода</li>
-                <li class="work-type__item work-type__item--mustache">Усы</li>
-              </ul>
-            </article>
-          </li>
-          <li class="works__wrapper">
-            <article class="works-item">
-              <p class="works-item__image-wrapper">
-                <picture>
-                  <source
-                    media="(min-width:1200px)"
-                    srcset="/images/photo-4-desktop@1x.jpg 1x"
-                  />
-                  <source
-                    media="(min-width:768px )"
-                    srcset="images/photo-4-tablet@1x.jpg 1x"
-                  />
-                  <img
-                    src="images/photo-4-mobile@1x.jpg"
-                    alt="Фото Фото Винстона Синего"
-                  />
-                </picture>
-              </p>
-              <blockquote class="works__blockquote">
-                <cite class="works__blockquote-author">Винстон Синий</cite>
-                <p>
-                  Как только зарастаю и волосы начинают мешать видеть — бегом в
-                  Бородинский!
-                </p>
-              </blockquote>
-              <ul class="work-type__list">
-                <li class="work-type__item work-type__item--haircut">
-                  Стрижка
-                </li>
-              </ul>
-            </article>
-          </li>
-        </ul>
-      </section>
+      <svg
+        class="triangle triangle--not-homepage triangle--top"
+        version="1.1"
+        xml:space="preserve"
+        viewBox="0 0 100 160"
+        preserveAspectRatio="none"
+        width="100%"
+        height="34"
+      >
+        <polygon points="0,0 50.1,160 50.1,220 0,220 0,160"></polygon>
+        <polygon points="49.9,160 100,0 100,160 100,220 49.9,220"></polygon>
+      </svg>
+      <div class="container container--portfolio">
+        <header class="page-main__header page-main__header--portfolio">
+          <h1 class="page__title page__title--portfolio">Наши работы</h1>
+          <a class="link link--homepage" href="/">На главную</a>
+        </header>
+        <section class="works">
+          <div class="container container--works">
+            <ul class="works__list">
+              <li class="works__wrapper works__wrapper--work-of-the-month">
+                <article class="works__item works__item--work-of-the-month">
+                  <div
+                    class="works__image-wrapper works__image-wrapper--work-of-the-month"
+                  >
+                    <picture>
+                      <source
+                        media="(min-width:1200px)"
+                        srcset="
+                          /images/photo-1-desktop@1x.jpg 1x,
+                          /images/photo-1-desktop@2x.jpg 2x
+                        "
+                      />
+                      <source
+                        media="(min-width:768px )"
+                        srcset="
+                          images/photo-1-tablet@1x.jpg 1x,
+                          images/photo-1-tablet@2x.jpg 2x
+                        "
+                      />
+                      <img
+                        class="works__photo works__photo--main"
+                        src="images/photo-1-mobile@1x.jpg"
+                        alt="Фото Лжепётра Мчиславского"
+                        width="280"
+                        height="480"
+                      />
+                    </picture>
+                  </div>
+                  <div
+                    class="works__description works__description--work-of-the-month"
+                  >
+                    <blockquote
+                      class="works__blockquote works__blockquote--work-of-the-month"
+                    >
+                      <cite class="works__blockquote-author"
+                        >Лжепётр Мчиславский</cite
+                      >
+                      <p class="works__blockquote-text">
+                        Где я только не стригся, но так как делаете это вы — не
+                        умеет никто другой! Еще раз спасибо и до скорого!
+                      </p>
+                    </blockquote>
+                    <ul class="work-type__list">
+                      <li class="work-type__item work-type__item--haircut">
+                        Стрижка
+                        <span
+                          class="work-type__icon work-type__icon--haircut icon icon--haircut"
+                        ></span>
+                      </li>
+                      <li class="work-type__item work-type__item--shaving">
+                        Бритьё
+                        <span
+                          class="work-type__icon work-type__icon--shaving icon icon--shaving"
+                        ></span>
+                      </li>
+                      <li class="work-type__item work-type__item--mustache">
+                        Усы
+                        <span
+                          class="work-type__icon work-type__icon--mustache icon icon--mustache"
+                        ></span>
+                      </li>
+                    </ul>
+                  </div>
+                </article>
+              </li>
+              <li class="works__wrapper">
+                <article class="works__item">
+                  <div class="works__image-wrapper">
+                    <picture>
+                      <source
+                        media="(min-width:1200px)"
+                        srcset="/images/photo-2-desktop@1x.jpg 1x"
+                      />
+                      <source
+                        media="(min-width:768px )"
+                        srcset="images/photo-2-tablet@1x.jpg 1x"
+                      />
+                      <img
+                        class="works__photo"
+                        src="images/photo-2-mobile@1x.jpg"
+                        alt="Фото Саши Мальцева"
+                      />
+                    </picture>
+                  </div>
+                  <div class="works__description">
+                    <blockquote class="works__blockquote">
+                      <cite class="works__blockquote-author">Саша Мальцев</cite>
+                      <p class="works__blockquote-text">
+                        Попросил омолодить и омолодили! Кто теперь скажет, что
+                        мне 45?
+                      </p>
+                    </blockquote>
+                    <ul class="work-type__list">
+                      <li class="work-type__item work-type__item--haircut">
+                        Стрижка
+                        <span
+                          class="work-type__icon work-type__icon--haircut icon icon--haircut"
+                        ></span>
+                      </li>
+                    </ul>
+                  </div>
+                </article>
+              </li>
+              <li class="works__wrapper">
+                <article class="works__item">
+                  <div class="works__image-wrapper">
+                    <picture>
+                      <source
+                        media="(min-width:1200px)"
+                        srcset="/images/photo-3-desktop@1x.jpg 1x"
+                      />
+                      <source
+                        media="(min-width:768px )"
+                        srcset="images/photo-3-tablet@1x.jpg 1x"
+                      />
+                      <img
+                        class="works__photo"
+                        src="images/photo-3-mobile@1x.jpg"
+                        alt="Фото Фото Владимира Иваныча"
+                      />
+                    </picture>
+                  </div>
+                  <div class="works__description">
+                    <blockquote class="works__blockquote">
+                      <cite class="works__blockquote-author"
+                        >Владимир Иваныч</cite
+                      >
+                      <p class="works__blockquote-text">
+                        К зимнему сезону — готов!
+                      </p>
+                    </blockquote>
+                    <ul class="work-type__list">
+                      <li class="work-type__item work-type__item--shaving">
+                        Борода
+                        <span
+                          class="work-type__icon work-type__icon--shaving icon icon--shaving"
+                        ></span>
+                      </li>
+                      <li class="work-type__item work-type__item--mustache">
+                        Усы
+                        <span
+                          class="work-type__icon work-type__icon--mustache icon icon--mustache"
+                        ></span>
+                      </li>
+                    </ul>
+                  </div>
+                </article>
+              </li>
+              <li class="works__wrapper">
+                <article class="works__item">
+                  <div class="works__image-wrapper">
+                    <picture>
+                      <source
+                        media="(min-width:1200px)"
+                        srcset="/images/photo-4-desktop@1x.jpg 1x"
+                      />
+                      <source
+                        media="(min-width:768px )"
+                        srcset="images/photo-4-tablet@1x.jpg 1x"
+                      />
+                      <img
+                        class="works__photo"
+                        src="images/photo-4-mobile@1x.jpg"
+                        alt="Фото Фото Винстона Синего"
+                      />
+                    </picture>
+                  </div>
+                  <div class="works__description">
+                    <blockquote class="works__blockquote">
+                      <cite class="works__blockquote-author"
+                        >Винстон Синий</cite
+                      >
+                      <p class="works__blockquote-text">
+                        Как только зарастаю и волосы начинают мешать видеть —
+                        бегом в Бородинский!
+                      </p>
+                    </blockquote>
+                    <ul class="work-type__list">
+                      <li class="work-type__item work-type__item--haircut">
+                        Стрижка
+                        <span
+                          class="work-type__icon work-type__icon--haircut icon icon--haircut"
+                        ></span>
+                      </li>
+                    </ul>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <svg
+        class="triangle triangle--portfolio-top"
+        version="1.1"
+        xml:space="preserve"
+        viewBox="0 0 100 160"
+        preserveAspectRatio="none"
+        width="100%"
+        height="34"
+      >
+        <polygon points="0,0 50.1,160 50.1,220 0,220 0,160"></polygon>
+        <polygon points="49.9,160 100,0 100,160 100,220 49.9,220"></polygon>
+      </svg>
       <section class="prices">
-        <h2 class="prices__heading">Прейскурант</h2>
-        <table>
-          <tr class="prices__row">
-            <td class="prices__column">1</td>
-            <td class="prices__column">Классическая стрижка</td>
-            <td class="prices__column">с мытьём головы</td>
-            <td class="prices__column">1 500 руб.</td>
-          </tr>
-          <tr class="prices__row">
-            <td class="prices__column">2</td>
-            <td class="prices__column">Современный вариант</td>
-            <td class="prices__column">с мытьём головы</td>
-            <td class="prices__column">1 500 руб.</td>
-          </tr>
-          <tr class="prices__row">
-            <td class="prices__column">3</td>
-            <td class="prices__column">Индивидуальный подход</td>
-            <td class="prices__column">с мытьём головы</td>
-            <td class="prices__column">2 000 руб.</td>
-          </tr>
-          <tr class="prices__row">
-            <td class="prices__column">4</td>
-            <td class="prices__column">Бритьё бороды</td>
-            <td class="prices__column">без мытья</td>
-            <td class="prices__column">500 руб.</td>
-          </tr>
-          <tr class="prices__row">
-            <td class="prices__column">5</td>
-            <td class="prices__column">Бритьё головы</td>
-            <td class="prices__column">с мытьём головы</td>
-            <td class="prices__column">1 000 руб.</td>
-          </tr>
-        </table>
-        <article class="happy-hours">
-          <figure>
-            <img
-              class="happy-hours__image"
-              src="images/clock-illustration.svg"
-              alt="счастливые часы"
-            />
-            <figcaption class="happy-hours__info">
-              C 10:00 до 14:00 скидка 20%
-            </figcaption>
-          </figure>
-        </article>
+        <div class="container container--works">
+          <h2 class="prices__heading">Прейскурант</h2>
+          <div class="prices__wrapper">
+            <table class="prices__table">
+              <tr class="prices__row">
+                <td class="prices__column prices__column--count">1</td>
+                <td class="prices__column">Классическая стрижка</td>
+                <td colspan="2" class="prices__column prices__column--mobile">
+                  <span class="prices__text prices__text--bold"
+                    >Классическая стрижка</span
+                  >
+                  <br />
+                  (с мытьём головы)
+                </td>
+                <td class="prices__column">с мытьём головы</td>
+                <td class="prices__column prices__column--price">1 500 руб.</td>
+              </tr>
+              <tr class="prices__row">
+                <td class="prices__column prices__column--count">2</td>
+                <td class="prices__column">Современный вариант</td>
+                <td colspan="2" class="prices__column prices__column--mobile">
+                  <span class="prices__text prices__text--bold"
+                    >Современный вариант</span
+                  >
+                  <br />
+                  (с мытьём головы)
+                </td>
+                <td class="prices__column">с мытьём головы</td>
+                <td class="prices__column prices__column--price">1 500 руб.</td>
+              </tr>
+              <tr class="prices__row">
+                <td class="prices__column prices__column--count">3</td>
+                <td class="prices__column">Индивидуальный подход</td>
+                <td colspan="2" class="prices__column prices__column--mobile">
+                  <span class="prices__text prices__text--bold"
+                    >Индивидуальный подход</span
+                  >
+                  <br />
+                  (с мытьём головы)
+                </td>
+                <td class="prices__column">с мытьём головы</td>
+                <td class="prices__column prices__column--price">2 000 руб.</td>
+              </tr>
+              <tr class="prices__row">
+                <td class="prices__column prices__column--count">4</td>
+                <td class="prices__column">Бритьё бороды</td>
+                <td colspan="2" class="prices__column prices__column--mobile">
+                  <span class="prices__text prices__text--bold">
+                    Бритьё бороды</span
+                  >
+                  <br />
+                  (без мытья)
+                </td>
+                <td class="prices__column">без мытья</td>
+                <td class="prices__column prices__column--price">500 руб.</td>
+              </tr>
+              <tr class="prices__row">
+                <td class="prices__column prices__column--count">5</td>
+                <td class="prices__column">Бритьё головы</td>
+                <td colspan="2" class="prices__column prices__column--mobile">
+                  <span class="prices__text prices__text--bold"
+                    >Бритьё головы</span
+                  >
+                  <br />
+                  (с мытьём головы)
+                </td>
+                <td class="prices__column">с мытьём головы</td>
+                <td class="prices__column prices__column--price">1 000 руб.</td>
+              </tr>
+            </table>
+            <article class="happy-hours">
+              <figure class="happy-hours__image-wrapper">
+                <img
+                  class="happy-hours__image"
+                  src="images/clock-illustration.svg"
+                  alt="счастливые часы"
+                />
+                <figcaption class="happy-hours__info">
+                  C 10:00 до 14:00 скидка 20%
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+        <svg
+          class="triangle triangle--portfolio-bottom"
+          version="1.1"
+          xml:space="preserve"
+          viewBox="0 0 100 160"
+          preserveAspectRatio="none"
+          width="100%"
+          height="34"
+        >
+          <polygon points="0,0 50.1,160 50.1,220 0,220 0,160"></polygon>
+          <polygon points="49.9,160 100,0 100,160 100,220 49.9,220"></polygon>
+        </svg>
       </section>
     </main>
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__contacts contacts">
-          <b class="contacts__title">Барбершоп Бородинский</b>
-          <p class="contacts__text">
-            г. Санкт-Петербург, ул. Большая Конюшенная 19/8 <br />
-            <a class="contacts__phone" href="+79999999999"
-              ><span class="contacts__phone-mobile">Тел.:</span>+7 (999)
+    <footer
+      class="page-footer page-footer--portfolio page-footer--not-homepage"
+    >
+      <div class="container">
+        <div class="page-footer__wrapper">
+          <div class="page-footer__contacts contacts">
+            <b class="contacts__title">Барбершоп Бородинский</b>
+            <p class="contacts__text">
+              г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+            </p>
+            <a class="contacts__phone button button--phone" href="+79999999999"
+              ><span class="contacts__phone-mobile">Тел.: </span> +7 (999)
               999-99-99</a
             >
-          </p>
-        </div>
-        <div class="page-footer__socials socials">
-          <b class="socials__title">Давайте дружить</b>
-          <ul>
-            <li class="socials__item">
-              <a class="socials__link socials__link--vk" href=""></a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--fb" href=""></a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--insta" href=""></a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__copyright copyright">
-          <b class="copyright__title">Разработано:</b>
-          <a class="copyright__link" href="">DUK97</a>
+          </div>
+          <div class="page-footer__socials socials">
+            <b class="socials__title">Давайте дружить!</b>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--vk" href=""
+                  ><svg
+                    class="socials__link-icon socials__link-icon--vk"
+                    width="23"
+                    height="26"
+                    viewBox="0 0 23 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21.0578 23.1669C22.3524 21.6495 23 19.9256 23 17.9952C23 14.77 20.3795 12.5167 16.7104 11.704C18.2892 11.3102 19.476 10.8769 20.2725 9.82914C21.0685 8.78136 21.4666 7.60888 21.4666 6.31371C21.4666 4.53562 20.7811 3.46042 19.4104 2.07623C18.0395 0.69205 15.8589 0 12.8681 0H0V26H13.5008C17.7378 26.0001 19.7631 24.6843 21.0578 23.1669ZM7.15553 5.14199H10.3755C12.3139 5.14199 13.2834 5.80362 13.2834 7.25114C13.2834 7.78441 13.0757 8.78752 12.6605 9.2572C12.2449 9.72704 11.5314 9.96192 10.5209 9.96192H7.15562V5.14199H7.15553ZM7.11795 20.2097V15.4858H11.0644C12.3381 15.4858 13.2142 15.7367 13.6918 16.2381C14.1692 16.7398 14.4086 17.2887 14.4086 17.8858C14.4086 18.4829 14.1625 19.0189 13.6712 19.4952C13.1794 19.9719 12.4072 20.2097 11.3551 20.2097H7.11795V20.2097Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--fb" href=""
+                  ><svg
+                    class="socials__link-icon socials__link-icon--fb"
+                    width="18"
+                    height="39"
+                    viewBox="0 0 18 39"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.6588 39V22.0042H0V14.3584H4.76532V8.03139C4.76532 8.03139 4.98274 0.0619276 11.095 0H17.8977V7.50299H13.678C13.678 7.50299 11.8963 7.50299 11.8963 9.74534C11.8963 11.9829 11.8963 14.4918 11.8963 14.4918H18L17.2669 22.1328H12.0028V39H4.6588Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--insta" href=""
+                  ><svg
+                    class="socials__link-icon socials__link-icon--insta"
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M36 0H0V36H36V0ZM18 11.4C21.6456 11.4 24.6 14.3556 24.6 18C24.6 21.6432 21.6456 24.6 18 24.6C14.3556 24.6 11.4 21.6432 11.4 18C11.4 14.3556 14.3556 11.4 18 11.4ZM31.2 31.2H4.8V15H7.6308C7.356 15.9528 7.2 16.9584 7.2 18C7.2 23.964 12.0372 28.8 18 28.8C23.9664 28.8 28.8 23.964 28.8 18C28.8 16.9584 28.644 15.9528 28.3692 15H31.2V31.2ZM31.2 6.0096V9.6288V10.8C31.2 10.8 30.6636 10.7868 30.0192 10.7976V10.8H26.4C25.746 10.8 25.2 10.8 25.2 10.8V4.8H30L30.0192 4.8036C30.0192 4.8036 31.2 4.8096 31.2 4.8C31.2 4.8 31.1976 6.006 31.1976 6.0096H31.2Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__copyright copyright">
+            <b class="copyright__title">Разработано:</b>
+            <a class="copyright__link button button--copyright" href="https://github.com/DUK97"
+              >DUK97</a
+            >
+          </div>
         </div>
       </div>
+      <script src="/scripts/script.js"></script>
     </footer>
   </body>
 </html>

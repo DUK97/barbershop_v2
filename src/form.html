@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Барбершоп "Бородинский" | Записаться на стрижку</title>
-    <link rel="stylesheet" href="/css/style.min.css" />
+    <title>Барбершоп "Бородинский"</title>
+    <!-- main styles -->
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body class="page__body">
     <header class="page-header page-header--not-main">
-      <a class="page-header__logo" href="">
+      <a class="page-header__logo" href="/">
         <picture
           ><source
             media="(min-width:1200px )"
@@ -33,7 +34,7 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="site-list-nav__item">
-                <a class="site-list-nav__link" href="">Главная</a>
+                <a class="site-list-nav__link" href="/">Главная</a>
               </li>
               <li class="site-list-nav__item">
                 <a class="site-list-nav__link" href="portfolio.html"
@@ -51,7 +52,7 @@
                 <a class="site-list-nav__link" href="">Контакты</a>
               </li>
               <li class="site-list-nav__item">
-                <a class="site-list-nav__link" href="">DUK97</a>
+                <a class="site-list-nav__link" href="https://github.com/DUK97">DUK97</a>
               </li>
             </ul>
             <ul class="site-list-nav__list user-list">
@@ -68,7 +69,7 @@
 
     <main class="page-main">
       <svg
-        class="triangle triangle--form"
+        class="triangle triangle--not-homepage triangle--top"
         version="1.1"
         xml:space="preserve"
         viewBox="0 0 100 160"
@@ -141,7 +142,6 @@
               </legend>
               <ul class="form__list form__list--beard">
                 <li class="form__list-item form__list-item--beard">
-                  <span class="icon icon--beard"></span>
                   <label class="form__label form__label--beard"
                     ><input
                       name="beard-type"
@@ -150,15 +150,15 @@
                       value="admiral"
                       checked
                     />адмирал
+                    <span class="icon icon--form"></span>
+                    <img
+                      class="form__image form__image--beard"
+                      src="images/beard-1.svg"
+                      alt=""
+                    />
                   </label>
-                  <img
-                    class="form__image form__image--beard"
-                    src="images/beard-1.svg"
-                    alt=""
-                  />
                 </li>
                 <li class="form__list-item form__list-item--beard">
-                  <span class="icon icon--beard"></span>
                   <label class="form__label form__label--beard"
                     ><input
                       name="beard-type"
@@ -166,15 +166,15 @@
                       type="radio"
                       value="lumberjack"
                     />лесоруб
+                    <span class="icon icon--form"></span>
+                    <img
+                      class="form__image form__image--beard"
+                      src="images/beard-2.svg"
+                      alt=""
+                    />
                   </label>
-                  <img
-                    class="form__image form__image--beard"
-                    src="images/beard-2.svg"
-                    alt=""
-                  />
                 </li>
                 <li class="form__list-item form__list-item--beard">
-                  <span class="icon icon--beard"></span>
                   <label class="form__label form__label--beard"
                     ><input
                       name="beard-type"
@@ -182,15 +182,15 @@
                       type="radio"
                       value="polar"
                     />полярник
+                    <span class="icon icon--form"></span>
+                    <img
+                      class="form__image form__image--beard"
+                      src="images/beard-3.svg"
+                      alt=""
+                    />
                   </label>
-                  <img
-                    class="form__image form__image--beard"
-                    src="images/beard-3.svg"
-                    alt=""
-                  />
                 </li>
                 <li class="form__list-item form__list-item--beard">
-                  <span class="icon icon--beard"></span>
                   <label class="form__label form__label--beard"
                     ><input
                       name="beard-type"
@@ -198,15 +198,15 @@
                       type="radio"
                       value="boyar"
                     />боярин
+                    <span class="icon icon--form"></span>
+                    <img
+                      class="form__image form__image--beard"
+                      src="images/beard-4.svg"
+                      alt=""
+                    />
                   </label>
-                  <img
-                    class="form__image form__image--beard"
-                    src="images/beard-4.svg"
-                    alt=""
-                  />
                 </li>
                 <li class="form__list-item form__list-item--beard">
-                  <span class="icon icon--beard"></span>
                   <label class="form__label form__label--beard"
                     ><input
                       name="beard-type"
@@ -214,12 +214,13 @@
                       type="radio"
                       value="sage"
                     />мудрец
+                    <span class="icon icon--form"></span>
+                    <img
+                      class="form__image form__image--beard"
+                      src="images/beard-5.svg"
+                      alt=""
+                    />
                   </label>
-                  <img
-                    class="form__image form__image--beard"
-                    src="images/beard-5.svg"
-                    alt=""
-                  />
                 </li>
               </ul>
             </fieldset>
@@ -232,66 +233,72 @@
               </legend>
               <ul class="form__list form__list--servises">
                 <li class="form__list-item form__list-item--servises">
-                  <label class="form__label form__label--servises"
-                    ><input
+                  <label class="form__label form__label--servises">
+                    <input
                       name="additional-servises"
                       class="form-input visually-hidden form__input--servises"
                       type="checkbox"
                       value="Tint-the-beard"
                       checked
-                    />Подкрасить бороду</label
-                  >
+                    />Подкрасить бороду
+                    <span class="icon icon--box"></span>
+                  </label>
                 </li>
                 <li class="form__list-item form__list-item--servises">
-                  <label class="form__label form__label--servises"
-                    ><input
+                  <label class="form__label form__label--servises">
+                    <input
                       name="additional-servises"
                       class="form-input visually-hidden form__input--servises"
                       type="checkbox"
                       value="Twist-a-mustache"
                       checked
-                    />Накрутить усы</label
-                  >
+                    />Накрутить усы
+                    <span class="icon icon--box"></span>
+                  </label>
                 </li>
                 <li class="form__list-item form__list-item--servises">
-                  <label class="form__label form__label--servises"
-                    ><input
+                  <label class="form__label form__label--servises">
+                    <input
                       name="additional-servises"
                       class="form-input visually-hidden form__input--servises"
                       type="checkbox"
                       value="Comb-your-beard"
-                    />Причесать бороду</label
-                  >
+                    />Причесать бороду
+                    <span class="icon icon--box"></span>
+                  </label>
                 </li>
                 <li class="form__list-item form__list-item--servises">
-                  <label class="form__label form__label--servises"
-                    ><input
+                  <label class="form__label form__label--servises">
+                    <input
                       name="additional-servises"
                       class="form-input visually-hidden form__input--servises"
                       type="checkbox"
                       value="Trim-the-whiskey"
-                    />Подровнять виски</label
-                  >
+                    />Подровнять виски
+                    <span class="icon icon--box"></span>
+                  </label>
                 </li>
                 <li class="form__list-item form__list-item--servises">
-                  <label class="form__label form__label--servises"
-                    ><input
+                  <label class="form__label form__label--servises">
+                    <input
                       name="additional-servises"
                       class="form-input visually-hidden form__input--servises"
                       type="checkbox"
                       value="Remove-gray-hair"
-                    />Убрать седину</label
-                  >
+                    />Убрать седину
+                    <span class="icon icon--box"></span>
+                  </label>
                 </li>
                 <li class="form__list-item form__list-item--servises">
-                  <label class="form__label form__label--servises"
-                    ><input
+                  <label class="form__label form__label--servises">
+                    <input
                       name="additional-servises"
                       class="form-input visually-hidden form__input--servises"
                       type="checkbox"
                       value="Polish-the-bald-head"
-                    />Отполировать лысину</label
-                  >
+                    />Отполировать лысину
+                    <span class="icon icon--box"></span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -305,6 +312,18 @@
           </form>
         </section>
       </div>
+      <svg
+        class="triangle triangle--form-bottom"
+        version="1.1"
+        xml:space="preserve"
+        viewBox="0 0 100 160"
+        preserveAspectRatio="none"
+        width="100%"
+        height="34"
+      >
+        <polygon points="0,0 50.1,160 50.1,220 0,220 0,160"></polygon>
+        <polygon points="49.9,160 100,0 100,160 100,220 49.9,220"></polygon>
+      </svg>
     </main>
     <footer class="page-footer">
       <div class="container">
@@ -377,13 +396,13 @@
           </div>
           <div class="page-footer__copyright copyright">
             <b class="copyright__title">Разработано:</b>
-            <a class="copyright__link button button--copyright" href=""
+            <a class="copyright__link button button--copyright" href="https://github.com/DUK97"
               >DUK97</a
             >
           </div>
         </div>
       </div>
-      <script src="/scripts/index.js"></script>
+      <script src="/scripts/script.js"></script>
     </footer>
   </body>
 </html>

@@ -1,6 +1,10 @@
 //user-list
 
 .user-list {
+  width: calc(250 / 320 * 100%);
+}
+.user-list-nav__item {
+  background-color: #6a4d38;
 }
 
 .user-list-nav__button {
@@ -16,6 +20,8 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  padding: 20px;
+  padding-left: 45px;
 
   &--active {
     border-bottom: 3px solid $roman-coffee;
@@ -35,7 +41,7 @@
     content: "";
     position: absolute;
     top: 33%;
-    left: 0;
+    left: 20px;
     background-image: url(/../images/sprite.png);
     width: 17px;
     height: 17px;
@@ -55,14 +61,23 @@
 
 .user-list__button-text {
   display: block;
+  font-weight: 400;
 }
 
 @media screen and (min-width: $tablet-width) {
+  .user-list {
+    width: auto;
+  }
+  .user-list-nav__item {
+    background-color: inherit;
+  }
   .user-list-nav__button {
     padding: 0;
+    box-shadow: none;
 
     &::after {
       top: 25px;
+      left: 0;
     }
   }
 

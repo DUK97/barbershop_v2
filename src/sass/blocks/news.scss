@@ -142,3 +142,18 @@
   line-height: 27px;
   color: #000000;
 }
+
+// combined styles
+
+.news__item:hover .news__text,
+.news__link:focus .news__text {
+  text-decoration: underline;
+}
+
+.news__item:hover .news__date,
+.news__link:focus .news__date {
+  background-image: url("../images/date-hover.svg");
+}
+.news__item:active .news__date {
+  background-image: url("../images/date-active.svg");
+}

@@ -1,12 +1,43 @@
 .work-type__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen and (min-width: $tablet-width) {
+    margin-top: auto;
+  }
 }
 .work-type__item {
+  width: 50%;
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: calc(27 / 16);
+  @media screen and (min-width: $desktop-width) {
+    width: auto;
+  }
 }
-.work-type__item--haircut {
-}
-.work-type__item--shaving {
-}
-.work-type__item--mustache {
-}
-.work-type__item--beard {
+.work-type__icon {
+  &--mustache {
+    padding-right: 58px;
+    &::before {
+      top: 9px;
+    }
+  }
+  &--haircut {
+    padding-right: 36px;
+    &::before {
+      top: 3px;
+    }
+  }
+  &--shaving {
+    padding-right: 43px;
+    &::before {
+      top: 3px;
+    }
+  }
+  order: -1;
 }

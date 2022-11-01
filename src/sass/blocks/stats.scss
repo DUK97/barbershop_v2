@@ -64,6 +64,7 @@
   font-size: 30px;
   line-height: 30px;
   font-weight: 700;
+  word-break: break-word;
 
   @media screen and (min-width: $tablet-width) {
     width: 50%;
@@ -85,6 +86,7 @@
   margin: 0;
   font-size: 20px;
   line-height: 27px;
+  word-break: break-word;
 
   @media screen and (min-width: $tablet-width) {
     width: 50%;

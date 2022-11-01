@@ -2,6 +2,12 @@
 .page-footer {
   background-color: $grey-back;
   padding-top: 50px;
+  &--not-homepage {
+    background-color: $nero;
+    padding-top: 40px;
+  }
+  &--portfolio {
+  }
 }
 .page-footer__wrapper {
   color: #ffffff;

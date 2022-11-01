@@ -1,7 +1,12 @@
 //form
 .form {
+  padding-bottom: 40px;
+  position: relative;
   @media screen and (min-width: $tablet-width) {
     padding-bottom: 75px;
+  }
+  @media screen and (min-width: $desktop-width) {
+    padding-bottom: 85px;
   }
 }
 .form__fields {
@@ -96,6 +101,7 @@
   }
   &--servises {
   }
+
   @media screen and (min-width: $tablet-width) {
     font-size: 30px;
     line-height: calc(40 / 30);
@@ -130,19 +136,22 @@
   }
 }
 
-.form__submit {
-}
-
 .form__label {
-  display: block;
+  cursor: pointer;
   &--beard {
     // padding-left: 25px;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  // &--servises {
-  //   padding-left: 25px;
-  // }
+  &--servises {
+    display: flex;
+    align-items: center;
+  }
+
   @media screen and (min-width: $tablet-width) {
     font-size: 24px;
     line-height: calc(31 / 24);
@@ -163,8 +172,16 @@
     flex-wrap: wrap;
   }
   &--servises {
+    position: relative;
+  }
+  @media screen and (min-width: $tablet-width) {
+    &--servises {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 }
+
 .form__list-item {
   margin-bottom: 32px;
   &--beard {
@@ -173,44 +190,50 @@
     padding: 0;
     padding-top: 71px;
   }
+
   &--servises {
+    position: relative;
+  }
+  &--servises::before {
   }
   &:last-child {
     margin-bottom: 0;
   }
-  &--beard::before {
-    content: "";
-    position: absolute;
-    width: 52px;
-    height: 52px;
-    left: 0;
-    top: 0;
-    border: 1px solid #e5ddd5;
-    background-color: #ffffff;
-    border-radius: 50%;
-  }
+
   @media screen and (min-width: $tablet-width) {
     &--beard {
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 20%;
+    }
+    &--servises {
+      width: 50%;
     }
   }
-}
-// combined styles
-.form__input--beard:checked + .icon--beard::after {
+  @media screen and (min-width: $desktop-width) {
+    width: 33%;
+  }
 }
 
-.form__list-item--beard
-  .form__input--beard:checked
-  + .form__list-item--beard
-  .icon--beard::before {
+// combined styles
+.form__input--beard:checked + .icon--form::after {
   content: "";
   position: absolute;
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  top: 33%;
-  left: 33%;
+  top: -71px;
+  left: -7px;
   background-color: $coffee;
+}
+
+.form__input--servises:checked + .icon--box::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 16px;
+  top: 25%;
+  left: 20%;
+  background-image: url("/images/arrow.svg");
 }

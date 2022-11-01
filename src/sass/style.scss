@@ -1,6 +1,7 @@
 /* stylelint-disable function-calc-no-invalid */
 @import "normalize.css";
 @import "../../src/sass/global/variables.scss";
+@import "../../src/sass/blocks/button.scss";
 @import "../../src/sass/global/global-style.scss";
 @import "slick-carousel/slick/slick.css";
 @import "../../src/sass/blocks/page.scss";
@@ -11,6 +12,7 @@
 @import "../../src/sass/global/fonts.scss";
 @import "../../src/sass/blocks/user-list.scss";
 @import "../../src/sass/blocks/stats.scss";
+@import "../../src/sass/blocks/triangle.scss";
 @import "../../src/sass/blocks/advantages.scss";
 @import "../../src/sass/blocks/page-main.scss";
 @import "../../src/sass/blocks/reviews.scss";
@@ -19,7 +21,11 @@
 @import "../../src/sass/blocks/copyright.scss";
 @import "../../src/sass/blocks/socials.scss";
 @import "../../src/sass/blocks/news.scss";
-@import "../../src/sass/blocks/slick.scss";
-@import "../../src/sass/blocks//link.scss";
-@import "../../src/sass/plugins/slick.min.css";
+@import "../../src/sass/blocks/happy-hours.scss";
 @import "../../src/sass/blocks/icon.scss";
+@import "../../src/sass/blocks/slick.scss";
+@import "../../src/sass/blocks/link.scss";
+@import "../../src/sass/blocks/works.scss";
+@import "../../src/sass/blocks/prices.scss";
+@import "../../src/sass/blocks/work-type.scss";
+@import "../../src/sass/plugins/slick.min.css";

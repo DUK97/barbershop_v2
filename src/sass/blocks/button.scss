@@ -1,0 +1,90 @@
+.button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #e5ddd5;
+  padding: 13px 0;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &--footer {
+    color: #ffffff;
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: #777777;
+    }
+
+    &:active {
+      opacity: 0.6;
+      border: none;
+    }
+  }
+
+  &--phone {
+    color: #ffffff;
+    border-color: $charcoal;
+    &:hover,
+    &:focus {
+      outline: 1px solid;
+    }
+  }
+  &--form-submit {
+    width: 100%;
+    background-color: $roman-coffee;
+    color: #ffffff;
+    &:hover,
+    &:focus {
+      background-color: #6a4d38;
+    }
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+    &:disabled {
+      background-color: #aeaeae;
+      cursor: not-allowed;
+    }
+  }
+
+  &--copyright {
+    color: #ffffff;
+    border-color: $charcoal;
+  }
+
+  &--form-submit {
+    width: 100%;
+    margin: 0;
+  }
+  @media screen and (min-width: $tablet-width) {
+    width: 160px;
+    &--phone {
+      border: none;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+      justify-content: flex-start;
+    }
+    &--copyright {
+      margin-right: 0;
+    }
+    &--form-submit {
+      margin: 0;
+      width: 100%;
+      font-size: 24px;
+      line-height: 31px;
+      height: 70px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 0;
+  }
+}

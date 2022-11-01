@@ -7,10 +7,6 @@
     <title>Барбершоп "Бородинский"</title>
     <!-- main styles -->
     <link rel="stylesheet" href="css/style.min.css" />
-    <!-- jquery -->
-    <script src="scripts/jquery.min.js"></script>
-    <!-- slick carousel -->
-    <script type="text/javascript" src="scripts/slick.min.js"></script>
   </head>
   <body class="page__body">
     <header class="page-header page-header--main">
@@ -40,7 +36,7 @@
               <li class="site-list-nav__item">
                 <a
                   class="site-list-nav__link site-list-nav__link--active"
-                  href=""
+                  href="/"
                   >Главная</a
                 >
               </li>
@@ -56,7 +52,7 @@
                 <a class="site-list-nav__link" href="">Контакты</a>
               </li>
               <li class="site-list-nav__item">
-                <a class="site-list-nav__link" href="">DUK97</a>
+                <a class="site-list-nav__link" href="https://github.com/DUK97">DUK97</a>
               </li>
             </ul>
             <ul class="site-list-nav__list user-list">
@@ -258,7 +254,7 @@
             <ul class="news__list">
               <li class="news__item">
                 <a class="news__link" href="#">
-                  <time class="news__date" datetime="2017-09-29">
+                  <time class="news__date" datetime="2022-09-29">
                     <b class="news__day">29</b>сент</time
                   >
                   <p class="news__text">
@@ -269,7 +265,7 @@
               </li>
               <li class="news__item">
                 <a class="news__link" href="#">
-                  <time class="news__date" datetime="2017-09-19"
+                  <time class="news__date" datetime="2022-09-19"
                     ><b class="news__day">19</b>сент</time
                   >
                   <p class="news__text">
@@ -280,7 +276,7 @@
               </li>
               <li class="news__item">
                 <a class="news__link" href="#">
-                  <time class="news__date" datetime="2017-09-09"
+                  <time class="news__date" datetime="2022-09-09"
                     ><b class="news__day">9</b>сент</time
                   >
                   <p class="news__text">
@@ -295,9 +291,9 @@
       </section>
       <section class="reviews">
         <div class="container">
-          <div class="reviews__header-wrapper">
+          <div class="reviews__header-wrapper block__header">
             <h2 class="reviews__title">Отзывы о нас</h2>
-            <a class="reviews__write button" href="">Оставить свой</a>
+            <a class="button reviews__write" href="">Оставить свой</a>
           </div>
           <div class="reviews__wrapper">
             <blockquote class="reviews__item">
@@ -394,7 +390,9 @@
             <p class="contacts__text">
               г. Санкт-Петербург, ул. Большая Конюшенная 19/8
             </p>
-            <a class="contacts__phone button button--phone" href="+79999999999"
+            <a
+              class="contacts__phone button button--phone button--footer"
+              href="tel:+79999999999"
               ><span class="contacts__phone-mobile">Тел.: </span> +7 (999)
               999-99-99</a
             >
@@ -403,7 +401,9 @@
             <b class="socials__title">Давайте дружить!</b>
             <ul class="socials__list">
               <li class="socials__item">
-                <a class="socials__link socials__link--vk" href=""
+                <a
+                  class="socials__link socials__link--vk button--footer"
+                  href=""
                   ><svg
                     class="socials__link-icon socials__link-icon--vk"
                     width="23"
@@ -420,7 +420,9 @@
                 </a>
               </li>
               <li class="socials__item">
-                <a class="socials__link socials__link--fb" href=""
+                <a
+                  class="socials__link socials__link--fb button--footer"
+                  href=""
                   ><svg
                     class="socials__link-icon socials__link-icon--fb"
                     width="18"
@@ -437,7 +439,9 @@
                 </a>
               </li>
               <li class="socials__item">
-                <a class="socials__link socials__link--insta" href=""
+                <a
+                  class="socials__link socials__link--insta button--footer"
+                  href=""
                   ><svg
                     class="socials__link-icon socials__link-icon--insta"
                     width="36"
@@ -457,13 +461,15 @@
           </div>
           <div class="page-footer__copyright copyright">
             <b class="copyright__title">Разработано:</b>
-            <a class="copyright__link button button--copyright" href=""
+            <a
+              class="copyright__link button button--copyright button--footer"
+              href="https://github.com/DUK97"
               >DUK97</a
             >
           </div>
         </div>
       </div>
-      <script src="/scripts/index.js"></script>
+      <script src="/scripts/script.js"></script>
     </footer>
   </body>
 </html>

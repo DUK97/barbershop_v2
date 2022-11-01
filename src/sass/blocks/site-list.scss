@@ -5,6 +5,13 @@
   flex-grow: 1;
   margin: 0;
   padding: 0;
+  flex-direction: column;
+  width: calc(250 / 320 * 100%);
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: row;
+    width: auto;
+  }
 }
 
 .site-list__item {
@@ -23,6 +30,9 @@
   line-height: 24px;
   font-family: inherit;
   position: relative;
+  padding-inline: 20px;
+  padding-block: 13px;
+  box-shadow: 0px 1px 0px #71543f, inset 0px 1px 0px #886e5b;
 
   &:hover,
   &:focus {
@@ -57,12 +67,14 @@
 @media screen and (min-width: $tablet-width) {
   .site-list-nav__link {
     padding: 24px 17px;
+    box-shadow: none;
   }
 }
 
 @media screen and (min-width: $desktop-width) {
   .site-list-nav__link {
     padding: 24px 32px;
+    box-shadow: none;
 
     &::after {
       left: 32px;
