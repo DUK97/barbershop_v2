@@ -65,6 +65,18 @@ body {
     width: 960px;
   }
 }
+.hide-on-mobile {
+  display: none;
+  @media screen and (min-width: $tablet-width) {
+    display: block;
+  }
+}
+.hide-on-tablet {
+  display: block;
+  @media screen and (min-width: $tablet-width) {
+    display: none;
+  }
+}
 
 // combined styles
 .form__label:hover .icon--box,

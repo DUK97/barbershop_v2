@@ -1,5 +1,10 @@
 //=require ./helpers/*.js
+
 $(function () {
+  initCarousel();
+});
+
+function initCarousel() {
   $(".advantages__list").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -39,14 +44,12 @@ $(function () {
     $(".reviews__wrapper").slick("resize");
   });
 
-  if (window.innerWidth < 450) {
-    const mobileMenuOpenBtn = document.querySelector(".main-nav__toggle");
-    mobileMenuOpenBtn.addEventListener("click", () => {
-      mobileMenuOpenBtn.classList.toggle("main-nav__toggle--opened");
-      const mobileMenuText = document.querySelector(".main-nav__text-mobile");
-      const mobileMenu = document.querySelector(".main-nav__wrapper");
-      mobileMenuText.classList.toggle("hidden");
-      mobileMenu.classList.toggle("shown");
-    });
-  }
-});
+  const mobileMenuOpenBtn = document.querySelector(".main-nav__toggle");
+  mobileMenuOpenBtn.addEventListener("click", () => {
+    mobileMenuOpenBtn.classList.toggle("main-nav__toggle--opened");
+    const mobileMenuText = document.querySelector(".main-nav__text-mobile");
+    const mobileMenu = document.querySelector(".main-nav__wrapper");
+    mobileMenuText.classList.toggle("hidden");
+    mobileMenu.classList.toggle("shown");
+  });
+}

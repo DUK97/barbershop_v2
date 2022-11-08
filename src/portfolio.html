@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Барбершоп "Бородинский"</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+
     <!-- main styles -->
     <link rel="stylesheet" href="css/style.min.css" />
-    <script type="text/javascript" src="scripts/helpers/slick.min.js"></script>
+    <!--scripts -->
+    <script defer src="/scripts/script.js"></script>
   </head>
   <body class="page__body">
     <header class="page-header page-header--not-main">
@@ -51,7 +54,9 @@
                 <a class="site-list-nav__link" href="">Контакты</a>
               </li>
               <li class="site-list-nav__item">
-                <a class="site-list-nav__link" href="https://github.com/DUK97">DUK97</a>
+                <a class="site-list-nav__link" href="https://github.com/DUK97"
+                  >DUK97</a
+                >
               </li>
             </ul>
             <ul class="site-list-nav__list user-list">
@@ -392,9 +397,7 @@
         </svg>
       </section>
     </main>
-    <footer
-      class="page-footer page-footer--portfolio page-footer--not-homepage"
-    >
+    <footer class="page-footer">
       <div class="container">
         <div class="page-footer__wrapper">
           <div class="page-footer__contacts contacts">
@@ -402,7 +405,9 @@
             <p class="contacts__text">
               г. Санкт-Петербург, ул. Большая Конюшенная 19/8
             </p>
-            <a class="contacts__phone button button--phone" href="+79999999999"
+            <a
+              class="contacts__phone button button--phone button--footer"
+              href="tel:+79999999999"
               ><span class="contacts__phone-mobile">Тел.: </span> +7 (999)
               999-99-99</a
             >
@@ -411,7 +416,9 @@
             <b class="socials__title">Давайте дружить!</b>
             <ul class="socials__list">
               <li class="socials__item">
-                <a class="socials__link socials__link--vk" href=""
+                <a
+                  class="socials__link socials__link--vk button--footer"
+                  href=""
                   ><svg
                     class="socials__link-icon socials__link-icon--vk"
                     width="23"
@@ -428,7 +435,9 @@
                 </a>
               </li>
               <li class="socials__item">
-                <a class="socials__link socials__link--fb" href=""
+                <a
+                  class="socials__link socials__link--fb button--footer"
+                  href=""
                   ><svg
                     class="socials__link-icon socials__link-icon--fb"
                     width="18"
@@ -445,7 +454,9 @@
                 </a>
               </li>
               <li class="socials__item">
-                <a class="socials__link socials__link--insta" href=""
+                <a
+                  class="socials__link socials__link--insta button--footer"
+                  href=""
                   ><svg
                     class="socials__link-icon socials__link-icon--insta"
                     width="36"
@@ -465,13 +476,74 @@
           </div>
           <div class="page-footer__copyright copyright">
             <b class="copyright__title">Разработано:</b>
-            <a class="copyright__link button button--copyright" href="https://github.com/DUK97"
+            <a
+              class="copyright__link button button--copyright button--footer"
+              href="https://github.com/DUK97"
               >DUK97</a
             >
           </div>
         </div>
       </div>
-      <script src="/scripts/script.js"></script>
     </footer>
+    <section class="sign-in-modal">
+      <div class="sign-in-modal__container">
+        <h5 class="sign-in-modal__title">Личный кабинет</h5>
+        <p class="sign-in-modal__additional-info">
+          Введите свой логин и пароль, чтобы войти
+        </p>
+        <form class="sign-in-modal__form" action="https://echo.htmlacademy.ru/">
+          <fieldset class="sign-in-modal__fieldset">
+            <label class="sign-in-modal__label sign-in-modal__label--login"
+              ><input
+                class="sign-in-modal__input"
+                placeholder="Логин"
+                type="text"
+                name="login"
+                required
+            /></label>
+            <label class="sign-in-modal__label sign-in-modal__label--password"
+              ><input
+                class="sign-in-modal__input"
+                placeholder="Пароль"
+                type="password"
+                name="password"
+                required
+            /></label>
+          </fieldset>
+          <p class="sign-in-modal__wrapper">
+            <label
+              class="sign-in-modal__label sign-in-modal__label--remember-me"
+              ><input
+                class="sign-in-modal__input sign-in-modal__input--checkbox visually-hidden"
+                name="remember"
+                type="checkbox"
+              />
+              <span class="icon icon--box icon--modal"></span>
+              Запомните меня</label
+            >
+            <a
+              href="#"
+              class="sign-in-modal__link sign-in-modal__link--forgot-password"
+              >Я забыл пароль!</a
+            >
+          </p>
+          <div class="sign-in-modal__wrapper">
+            <button
+              class="sign-in-modal__submit button button--form-submit"
+              type="submit"
+            >
+              <span class="hide-on-mobile">Войти в личный кабинет</span>
+              <span class="hide-on-tablet">Войти</span>
+            </button>
+            <button
+              class="sign-in-modal__close-btn button button--close-modal"
+              type="button"
+            >
+              Закрыть
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
   </body>
 </html>

@@ -20,8 +20,6 @@
   flex-direction: column;
 
   @media screen and (min-width: $tablet-width) {
-    display: grid;
-    grid-template-areas: "news-title 1fr news-button" " news-list news-list news-list";
   }
 }
 
@@ -148,6 +146,7 @@
 .news__item:hover .news__text,
 .news__link:focus .news__text {
   text-decoration: underline;
+  color: $coffee;
 }
 
 .news__item:hover .news__date,

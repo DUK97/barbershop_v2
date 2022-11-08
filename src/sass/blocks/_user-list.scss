@@ -10,7 +10,7 @@
 
 .user-list-nav__button {
   position: relative;
-  display: block;
+  display: flex;
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
@@ -23,6 +23,7 @@
   cursor: pointer;
   padding: 18.5px;
   padding-left: 45px;
+  width: 100%;
 
   &--active {
     border-bottom: 3px solid $roman-coffee;
@@ -32,6 +33,10 @@
   &:focus {
     background-color: #ffffff;
     color: #000000;
+
+    &::after {
+      background-position: 0 0;
+    }
   }
 
   &:active {
@@ -91,10 +96,16 @@
   .user-list-nav__button {
     padding: 24px 32px;
     padding-left: 60px;
+    width: 100%;
+    line-height: 24px;
 
     &::after {
       left: 26px;
+      top: 28px;
     }
+  }
+  .user-list-nav__item {
+    width: 150px;
   }
 
   .user-list__button-text {

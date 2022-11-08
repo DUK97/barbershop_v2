@@ -25,6 +25,11 @@
     border: 1px solid $spring-wood;
     order: -1;
   }
+  &--modal {
+    margin-right: 15px;
+    width: 33px;
+    height: 33px;
+  }
   &--haircut {
     &::before {
       position: absolute;

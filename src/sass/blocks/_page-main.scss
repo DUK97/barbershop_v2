@@ -8,8 +8,7 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  &--form {
-  }
+
   @media screen and (min-width: $tablet-width) {
     &--form {
       margin-bottom: 70px;

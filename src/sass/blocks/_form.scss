@@ -2,6 +2,8 @@
 .form {
   padding-bottom: 40px;
   position: relative;
+  &--sign-in {
+  }
   @media screen and (min-width: $tablet-width) {
     padding-bottom: 75px;
   }
@@ -23,6 +25,8 @@
   }
   &--contact-info {
   }
+  &--sign-in {
+  }
   @media screen and (min-width: $tablet-width) {
     &--name {
       display: grid;
@@ -39,7 +43,7 @@
 .form__input {
   padding: 9px 20px;
   margin-bottom: 6px;
-  border: 1px solid #e5ddd5;
+  border: 1px solid $spring-wood;
   &--name {
   }
 
@@ -60,6 +64,7 @@
     font-size: 18px;
     line-height: 24px;
   }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -78,7 +83,7 @@
       width: 100%;
     }
     &--name:last-child {
-      border-right: 1px solid #e5ddd5;
+      border-right: 1px solid $spring-wood;
     }
     &--contact-info {
       margin-bottom: 35px;
@@ -88,6 +93,11 @@
     }
   }
   @media screen and (min-width: $desktop-width) {
+    &--name {
+      margin-right: 30px;
+      width: 295px;
+      border-right: 1px solid $spring-wood;
+    }
   }
 }
 

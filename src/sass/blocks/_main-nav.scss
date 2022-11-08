@@ -1,12 +1,15 @@
 /*main-nav*/
 .main-nav {
   background-color: $roman-coffee;
+  @media screen and (min-width: $tablet-width) {
+    background-color: #000000;
+  }
 }
 
 .main-nav__wrapper {
   opacity: 0;
   transform: translateX(-550px);
-  transition: transform .5s ease-out, height .5s ease-out, opacity .5s;
+  transition: transform 0.5s ease-out, height 0.5s ease-out, opacity 0.5s;
   height: 0;
 
   &.shown {
@@ -17,11 +20,18 @@
     opacity: 1;
     height: 300px;
   }
-
   @media screen and (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     height: auto;
     opacity: 1;
     transform: none;
+    transition: none;
+    &.shown {
+      flex-direction: row;
+      height: auto;
+    }
   }
 }
 
@@ -45,6 +55,9 @@
   margin: 0;
 
   &--hidden {
+    display: none;
+  }
+  @media screen and (min-width: $tablet-width) {
     display: none;
   }
 }
@@ -92,26 +105,7 @@
       transform: rotate(-45deg);
     }
   }
-}
-
-@media screen and (min-width: $tablet-width) {
-  .main-nav__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .main-nav__toggle {
+  @media screen and (min-width: $tablet-width) {
     display: none;
   }
-
-  .main-nav__text-mobile {
-    display: none;
-  }
-
-  .main-nav {
-    background-color: #000000;
-  }
 }
-
-
