@@ -6,7 +6,8 @@
   padding: 0;
   @media screen and (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,294px);
+    column-gap: 40px;
   }
 }
 
@@ -22,12 +23,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-right: 40px;
     margin-bottom: 0;
-    &:first-child,
-    &:last-child {
-      margin-right: 0;
-    }
+
   }
   &--work-of-the-month {
     @media screen and (min-width: $desktop-width) {

@@ -3,6 +3,7 @@
 .user-list {
   width: calc(250 / 320 * 100%);
 }
+
 .user-list-nav__item {
   background-color: #6a4d38;
 }
@@ -15,12 +16,12 @@
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 13px;
   font-family: inherit;
   border: none;
   background-color: transparent;
   cursor: pointer;
-  padding: 20px;
+  padding: 18.5px;
   padding-left: 45px;
 
   &--active {

@@ -56,7 +56,7 @@
   }
   &--beard {
   }
-  &--servises {
+  &--services {
     font-size: 18px;
     line-height: 24px;
   }
@@ -64,7 +64,7 @@
     margin-bottom: 0;
   }
   &::placeholder {
-    font-style: 18px;
+    font-size: 18px;
     line-height: 30px;
     color: #000000;
   }
@@ -99,7 +99,7 @@
   margin-bottom: 35px;
   &--beard {
   }
-  &--servises {
+  &--services {
   }
 
   @media screen and (min-width: $tablet-width) {
@@ -110,7 +110,7 @@
     }
 
     &--beard::before,
-    &--servises::before {
+    &--services::before {
       position: absolute;
       content: "";
       width: 136px;
@@ -120,7 +120,7 @@
       height: 1px;
     }
     &--beard::after,
-    &--servises::after {
+    &--services::after {
       position: absolute;
       content: "";
       width: 136px;
@@ -130,7 +130,7 @@
       height: 1px;
     }
 
-    &--servises {
+    &--services {
       position: relative;
     }
   }
@@ -147,7 +147,7 @@
     align-items: center;
   }
 
-  &--servises {
+  &--services {
     display: flex;
     align-items: center;
   }
@@ -171,11 +171,11 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-  &--servises {
+  &--services {
     position: relative;
   }
   @media screen and (min-width: $tablet-width) {
-    &--servises {
+    &--services {
       flex-direction: row;
       flex-wrap: wrap;
     }
@@ -191,10 +191,10 @@
     padding-top: 71px;
   }
 
-  &--servises {
+  &--services {
     position: relative;
   }
-  &--servises::before {
+  &--services::before {
   }
   &:last-child {
     margin-bottom: 0;
@@ -207,7 +207,7 @@
       align-items: center;
       width: 20%;
     }
-    &--servises {
+    &--services {
       width: 50%;
     }
   }
@@ -228,7 +228,7 @@
   background-color: $coffee;
 }
 
-.form__input--servises:checked + .icon--box::after {
+.form__input--services:checked + .icon--box::after {
   content: "";
   position: absolute;
   width: 22px;
