@@ -9,11 +9,11 @@
     <!-- main styles -->
     <link rel="stylesheet" href="css/style.min.css" />
     <!--scripts -->
-    <script defer src="/scripts/script.js"></script>
+    <script defer src="scripts/script.js"></script>
   </head>
   <body class="page__body">
     <header class="page-header page-header--main">
-      <a class="page-header__logo" href="">
+      <a class="page-header__logo" href="#">
         <picture
           ><source
             media="(min-width:1200px )"
@@ -39,7 +39,7 @@
               <li class="site-list-nav__item">
                 <a
                   class="site-list-nav__link site-list-nav__link--active"
-                  href="/"
+                  href="index.html"
                   >Главная</a
                 >
               </li>
@@ -52,7 +52,7 @@
                 <a class="site-list-nav__link" href="form.html">Записаться</a>
               </li>
               <li class="site-list-nav__item">
-                <a class="site-list-nav__link" href="">Контакты</a>
+                <a class="site-list-nav__link" href="#">Контакты</a>
               </li>
               <li class="site-list-nav__item">
                 <a class="site-list-nav__link" href="https://github.com/DUK97"
@@ -62,7 +62,10 @@
             </ul>
             <ul class="site-list-nav__list user-list">
               <li class="user-list-nav__item">
-                <button class="user-list-nav__button js-login">
+                <button
+                  class="user-list-nav__button js-login"
+                  data-target=".sign-in-modal"
+                >
                   <span class="user-list__button-text">Войти</span>
                 </button>
               </li>
@@ -255,7 +258,7 @@
         <div class="container">
           <div class="news__wrapper">
             <h2 class="news__title">Новости и акции</h2>
-            <a class="news__to-all button" tabindex="0" href="">Показать все</a>
+            <a class="news__to-all link" tabindex="0" href="#">Показать все</a>
             <ul class="news__list">
               <li class="news__item">
                 <a class="news__link" href="#">
@@ -298,7 +301,7 @@
         <div class="container">
           <div class="reviews__header-wrapper block__header">
             <h2 class="reviews__title">Отзывы о нас</h2>
-            <a class="button reviews__write" href="">Оставить свой</a>
+            <a class="link reviews__write" href="#">Оставить свой</a>
           </div>
           <div class="reviews__wrapper">
             <blockquote class="reviews__item">
@@ -329,16 +332,10 @@
               <picture class="reviews__image"
                 ><source
                   media="(min-width:1200px )"
-                  srcset="images/picture-travis-desktop@1x.jpg"
+                  srcset="images/edward.jpg"
                 />
-                <source
-                  media="(min-width:768px )"
-                  srcset="images/picture-travis-tablet@1x.jpg"
-                />
-                <img
-                  src="images/picture-travis-mobile@1x.jpg"
-                  alt="Барбершоп Бородинский"
-                />
+                <source media="(min-width:768px )" srcset="images/edward.jpg" />
+                <img src="images/edward.jpg" alt="Барбершоп Бородинский" />
               </picture>
               <div class="reviews__author-info">
                 <cite class="reviews__author-name">Эдвард Руки-ножницы</cite>
@@ -352,16 +349,10 @@
               <picture class="reviews__image"
                 ><source
                   media="(min-width:1200px )"
-                  srcset="images/picture-travis-desktop@1x.jpg"
+                  srcset="images/oliver.jpg"
                 />
-                <source
-                  media="(min-width:768px )"
-                  srcset="images/picture-travis-tablet@1x.jpg"
-                />
-                <img
-                  src="images/picture-travis-mobile@1x.jpg"
-                  alt="Барбершоп Бородинский"
-                />
+                <source media="(min-width:768px )" srcset="images/oliver.jpg" />
+                <img src="images/oliver.jpg" alt="Барбершоп Бородинский" />
               </picture>
               <div class="reviews__author-info">
                 <cite class="reviews__author-name">Оливер Маккарти</cite>
@@ -407,8 +398,8 @@
             <ul class="socials__list">
               <li class="socials__item">
                 <a
-                  class="socials__link socials__link--vk button--footer"
-                  href=""
+                  class="socials__link socials__link--vk button button--socials button--footer"
+                  href="#"
                   ><svg
                     class="socials__link-icon socials__link-icon--vk"
                     width="23"
@@ -426,8 +417,8 @@
               </li>
               <li class="socials__item">
                 <a
-                  class="socials__link socials__link--fb button--footer"
-                  href=""
+                  class="socials__link socials__link--fb button button--socials button--footer"
+                  href="#"
                   ><svg
                     class="socials__link-icon socials__link-icon--fb"
                     width="18"
@@ -445,8 +436,8 @@
               </li>
               <li class="socials__item">
                 <a
-                  class="socials__link socials__link--insta button--footer"
-                  href=""
+                  class="socials__link socials__link--insta button button--socials button--footer"
+                  href="#"
                   ><svg
                     class="socials__link-icon socials__link-icon--insta"
                     width="36"
@@ -526,7 +517,7 @@
               <span class="hide-on-tablet">Войти</span>
             </button>
             <button
-              class="sign-in-modal__close-btn button button--close-modal"
+              class="sign-in-modal__close-btn button button--close-modal js-close-modal"
               type="button"
             >
               Закрыть

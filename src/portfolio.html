@@ -10,11 +10,11 @@
     <!-- main styles -->
     <link rel="stylesheet" href="css/style.min.css" />
     <!--scripts -->
-    <script defer src="/scripts/script.js"></script>
+    <script defer src="scripts/script.js"></script>
   </head>
   <body class="page__body">
     <header class="page-header page-header--not-main">
-      <a class="page-header__logo" href="/">
+      <a class="page-header__logo" href="index.html">
         <picture
           ><source
             media="(min-width:1200px )"
@@ -38,7 +38,7 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="site-list-nav__item">
-                <a class="site-list-nav__link" href="/">Главная</a>
+                <a class="site-list-nav__link" href="index.html">Главная</a>
               </li>
               <li class="site-list-nav__item">
                 <a
@@ -51,7 +51,7 @@
                 <a class="site-list-nav__link" href="form.html">Записаться</a>
               </li>
               <li class="site-list-nav__item">
-                <a class="site-list-nav__link" href="">Контакты</a>
+                <a class="site-list-nav__link" href="#">Контакты</a>
               </li>
               <li class="site-list-nav__item">
                 <a class="site-list-nav__link" href="https://github.com/DUK97"
@@ -87,7 +87,7 @@
       <div class="container container--portfolio">
         <header class="page-main__header page-main__header--portfolio">
           <h1 class="page__title page__title--portfolio">Наши работы</h1>
-          <a class="link link--homepage" href="/">На главную</a>
+          <a class="link link--homepage" href="index.html">На главную</a>
         </header>
         <section class="works">
           <div class="container container--works">
@@ -101,8 +101,8 @@
                       <source
                         media="(min-width:1200px)"
                         srcset="
-                          /images/photo-1-desktop@1x.jpg 1x,
-                          /images/photo-1-desktop@2x.jpg 2x
+                          images/photo-1-desktop@1x.jpg 1x,
+                          images/photo-1-desktop@2x.jpg 2x
                         "
                       />
                       <source
@@ -164,7 +164,7 @@
                     <picture>
                       <source
                         media="(min-width:1200px)"
-                        srcset="/images/photo-2-desktop@1x.jpg 1x"
+                        srcset="images/photo-2-desktop@1x.jpg 1x"
                       />
                       <source
                         media="(min-width:768px )"
@@ -202,7 +202,7 @@
                     <picture>
                       <source
                         media="(min-width:1200px)"
-                        srcset="/images/photo-3-desktop@1x.jpg 1x"
+                        srcset="images/photo-3-desktop@1x.jpg 1x"
                       />
                       <source
                         media="(min-width:768px )"
@@ -247,7 +247,7 @@
                     <picture>
                       <source
                         media="(min-width:1200px)"
-                        srcset="/images/photo-4-desktop@1x.jpg 1x"
+                        srcset="images/photo-4-desktop@1x.jpg 1x"
                       />
                       <source
                         media="(min-width:768px )"
@@ -418,7 +418,7 @@
               <li class="socials__item">
                 <a
                   class="socials__link socials__link--vk button--footer"
-                  href=""
+                  href="#"
                   ><svg
                     class="socials__link-icon socials__link-icon--vk"
                     width="23"
@@ -437,7 +437,7 @@
               <li class="socials__item">
                 <a
                   class="socials__link socials__link--fb button--footer"
-                  href=""
+                  href="#"
                   ><svg
                     class="socials__link-icon socials__link-icon--fb"
                     width="18"
@@ -456,7 +456,7 @@
               <li class="socials__item">
                 <a
                   class="socials__link socials__link--insta button--footer"
-                  href=""
+                  href="#"
                   ><svg
                     class="socials__link-icon socials__link-icon--insta"
                     width="36"
@@ -536,7 +536,7 @@
               <span class="hide-on-tablet">Войти</span>
             </button>
             <button
-              class="sign-in-modal__close-btn button button--close-modal"
+              class="sign-in-modal__close-btn button button--close-modal js-close-modal"
               type="button"
             >
               Закрыть

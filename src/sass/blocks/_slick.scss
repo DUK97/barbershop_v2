@@ -81,7 +81,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
+  transition: border 0.3s ease;
   &::before {
     content: "";
     border-width: 6px 12px 6px 0;
@@ -98,6 +98,16 @@
 
   &.slick-prev {
     grid-area: slick-prev-reviews;
+  }
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: #777777;
+  }
+
+  &:active {
+    opacity: 0.6;
+    border: none;
   }
 
   @media screen and (min-width: $desktop-width) {

@@ -7,6 +7,7 @@
   padding: 0;
   flex-direction: column;
   width: calc(250 / 320 * 100%);
+  transition: 0.5s;
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: row;
@@ -30,11 +31,31 @@
   padding-inline: 20px;
   padding-block: 13px;
   box-shadow: 0px 1px 0px #71543f, inset 0px 1px 0px #886e5b;
-
+  position: relative;
+  transition: 0.5s;
   &:hover,
   &:focus {
-    background-color: #ffffff;
     color: #000000;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+    z-index: -1;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);
   }
 
   &:active {
@@ -46,6 +67,11 @@
     :focus {
       background-color: #000000;
       color: #ffffff;
+      cursor: auto;
+    }
+    &:hover::before,
+    :focus::before {
+      content: unset;
     }
 
     &::after {
@@ -78,4 +104,9 @@
   margin: 0;
   list-style: none;
   text-align: center;
+}
+
+// combined styles
+.site-list:hover .site-list-nav__item .site-list-nav__link {
+  transform: scale(1);
 }
