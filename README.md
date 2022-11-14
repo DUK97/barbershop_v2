@@ -26,9 +26,9 @@
 
 - [Главная страница](https://duk97.github.io/barbershop_v2/)
 
-- [Портфолио](https://duk97.github.io/barbershop_v2/)
+- [Портфолио](https://duk97.github.io/barbershop_v2/portfolio.html)
 
-- [Страница записи на стрижку](https://duk97.github.io/barbershop_v2/)
+- [Страница записи на стрижку](https://duk97.github.io/barbershop_v2/form.html)
 
 ## Связь с разработчиком
 
